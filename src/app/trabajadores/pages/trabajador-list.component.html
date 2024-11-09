@@ -1,0 +1,16 @@
+<h2>Listado de Trabajadores en Arreglo</h2>
+<ul class="list-group">
+  <li *ngFor="let trabajador of trabajador" class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+      <span class="text-primary">{{ trabajador.name }}</span>
+      <span> -> Apellido: {{ trabajador.apellido }}</span>
+      <span> -> DPI: {{ trabajador.dpi }}</span>
+      <span> -> Celular: {{ trabajador.celular }}</span>
+      <span> -> Telefono: {{ trabajador.telefono }}</span>
+      <span> -> Correo: {{ trabajador.correo }}</span>
+      <span> -> NIT: {{ trabajador.nit }}</span>
+      <span> -> Direccion: {{ trabajador.direccion }}</span>
+    </div>
+  </li>
+</ul>
+

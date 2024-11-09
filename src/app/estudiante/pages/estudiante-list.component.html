@@ -1,0 +1,11 @@
+<h2>Listado de Estudiantes en Arreglo</h2>
+<ul class="list-group">
+  <li *ngFor="let student of students" class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+      <span class="text-primary">{{ student.name }}</span>
+      <span> -> Age: {{ student.age }}</span>
+      <span> -> Grade: {{ student.grade }}</span>
+    </div>
+  </li>
+</ul>
+

@@ -1,0 +1,49 @@
+<form [formGroup]="personaForm" (ngSubmit)="onSubmit()" class="p-4 border rounded shadow-sm bg-light minimalist-form"></form>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Nombre:</label>
+      <input class="form-control" id="name" formControlName="names" placeholder="Ingrese sus Nombres">
+    </div>
+    <div class="col-md-6">
+      <label for="lastNames" class="form-label">Apellido:</label>
+      <input class="form-control" id="lastNames" formControlName="lastNames" placeholder="Ingrese sus Apellidos">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="DPI" class="form-label">DPI:</label>
+      <input class="form-control" id="DPI" formControlName="DPI" placeholder="Ingrese su DPI">
+    </div>
+    <div class="col-md-6">
+      <label for="phoneNumber" class="form-label">Teléfono Personal:</label>
+      <input class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="Ingrese su Número Personal">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="phoneNumberHome" class="form-label">Teléfono de Casa:</label>
+      <input class="form-control" id="phoneNumberHome" formControlName="phoneNumberHome" placeholder="Ingrese su Teléfono de Casa">
+    </div>
+    <div class="col-md-6">
+      <label for="mail" class="form-label">Correo Electrónico:</label>
+      <input class="form-control" id="mail" formControlName="mail" placeholder="Ingrese su Correo Electrónico">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="NIT" class="form-label">NIT:</label>
+      <input class="form-control" id="NIT" formControlName="NIT" placeholder="Ingrese su NIT">
+    </div>
+    <div class="col-md-6">
+      <label for="direccion" class="form-label">Dirección Domiciliar:</label>
+      <input class="form-control" id="direccion" formControlName="direccion" placeholder="Ingrese su Dirección">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <button class="btn btn-success btn-lg px-4" type="button" (click)="saveToFirebase()" [disabled]="personaForm.invalid">
+        Guardar Persona en Base de Datos
+      </button>
+    </div>
+  </div>
+</form>
